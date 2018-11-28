@@ -1,0 +1,70 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<!-- Si volem posar 2 forms alineats, els hem de posar dins d'un Form container !!! 
+     Copiem el codi del projecte Exemple_2_Forms_Alineats on ja ho hem fet...
+-->
+	<f:Form id="sl_form" editable="false">
+		<f:layout>
+			<f:GridLayout labelSpanXL="2" labelSpanL="2" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="10" columnsL="10"
+				columnsM="8" singleContainerFullSize="false"></f:GridLayout>
+		</f:layout>
+		<f:formContainers>
+			<f:FormContainer title="Datos Cabecera Pedido">
+				<f:formElements>
+					<f:FormElement label="Creado por: ">
+						<f:fields>
+							<Text text="{Ernam}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Fecha Creación: ">
+						<f:fields>
+							<Text text="{Erdat}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Org. de Ventas: ">
+						<f:fields>
+							<Text text="{Vkorg}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Clase Pedido: ">
+						<f:fields>
+							<Text text="{Auart}"></Text>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+				<f:layoutData>
+					<f:GridContainerData halfGrid="true"></f:GridContainerData>
+				</f:layoutData>
+			</f:FormContainer>
+			<f:FormContainer title="Datos Cliente">
+				<f:formElements>
+					<f:FormElement label="Código: ">
+						<f:fields>
+							<Text text="{OrderToCustomer/Kunnr}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Descripción: ">
+						<f:fields>
+							<Text text="{OrderToCustomer/Name1}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Pais: ">
+						<f:fields>
+							<Text text="{
+							path: 'OrderToCustomer/Land1',
+							formatter: '.formatter.getLand'
+							}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Ciudad: ">
+						<f:fields>
+							<Text text="{OrderToCustomer/Ort01}"></Text>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+				<f:layoutData>
+					<f:GridContainerData halfGrid="true"></f:GridContainerData>
+				</f:layoutData>
+			</f:FormContainer>
+		</f:formContainers>
+	</f:Form>
+</core:FragmentDefinition>

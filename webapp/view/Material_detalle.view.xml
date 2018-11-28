@@ -1,0 +1,67 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sl.controller.Material_detalle"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Detalle del Material">
+				<content>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Material info"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<f:Form id="sl_form_mat" editable="false">
+								<f:layout>
+									<f:GridLayout labelSpanXL="2" labelSpanL="2" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="10" columnsL="10"
+										columnsM="8"></f:GridLayout>
+								</f:layout>
+								<f:formContainers>
+									<f:FormContainer title="Datos del Material">
+										<f:formElements>
+											<f:FormElement label="Creado por: ">
+												<f:fields>
+													<Text text="{Ernam}"></Text>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Tipo de Material: ">
+												<f:fields>
+													<Text text="{Mtart}"></Text>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Grupo de Articulos: ">
+												<f:fields>
+													<Text text="{Matkl}"></Text>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Unidad Base: ">
+												<f:fields>
+													<Text text="{Meins}"></Text>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Peso Bruto: ">
+												<f:fields>
+													<Text text="{Brgew}"></Text>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Peso Neto: ">
+												<f:fields>
+													<Text text="{Ntgew}"></Text>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Unidad pedo: ">
+												<f:fields>
+													<Text text="{Gewei}"></Text>
+												</f:fields>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+								</f:formContainers>
+							</f:Form>
+						</content>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

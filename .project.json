@@ -1,0 +1,75 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.watt.common.builder.sapui5clientbuild"
+  ],
+  "build": {
+    "targetFolder": "dist",
+    "sourceFolder": "webapp",
+    "excludedFolders": [
+      "test"
+    ],
+    "excludedFiles": [
+      "test.html"
+    ],
+    "buildRequired": true
+  },
+  "dataBinding": {
+    "/webapp/view/App.view.xml": {
+      "entitySet": "UNBINDKEY"
+    },
+    "/webapp/view/NotFound.view.xml": {
+      "entitySet": "UNBINDKEY"
+    },
+    "/webapp/view/DetailObjectNotFound.view.xml": {
+      "entitySet": "UNBINDKEY"
+    },
+    "/webapp/view/DetailNoObjectsAvailable.view.xml": {
+      "entitySet": "UNBINDKEY"
+    },
+    "/webapp/view/Master.view.xml": {
+      "entitySet": "SalesOrderHeaderSet"
+    },
+    "/webapp/view/Detail.view.xml": {
+      "entitySet": "SalesOrderHeaderSet"
+    }
+  },
+  "generation": [
+    {
+      "templateId": "sap.ui.ui5-template-plugin.2masterdetail",
+      "templateVersion": "1.38.3",
+      "dateTimeStamp": "Mon, 26 Nov 2018 14:40:37 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Wed, 28 Nov 2018 08:50:46 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZSL_VENTAS_ASSOCIATIONS_SRV",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "basevalidator": {
+    "services": {
+      "xml": "fioriXmlAnalysis",
+      "js": "fioriJsValidator"
+    }
+  },
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": false,
+    "blockPushLevel": "Error"
+  }
+}
