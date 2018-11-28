@@ -285,6 +285,7 @@ sap.ui.define([
 		 * @private
 		 */
 		_applyFilterSearch: function() {
+			debugger;
 			var aFilters = this._oListFilterState.aSearch.concat(this._oListFilterState.aFilter),
 				oViewModel = this.getModel("masterView");
 			this._oList.getBinding("items").filter(aFilters, "Application");
